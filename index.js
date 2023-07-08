@@ -15,8 +15,8 @@ import {
 import express from "express";
 const app = express();
 
-const PORT = process.env.PORT;
-const MONGO_URL = process.env.MONGO;
+const PORT = process.env.PORT || '8000';
+const MONGO_URL = process.env.MONGO || "mongodb://127.0.0.1:27017";
 
 app.use(express.json());
 app.use(cors());
